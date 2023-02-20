@@ -44,6 +44,7 @@
 
       switchBtn.addEventListener("click", () => {
         mode = mode === "environment" ? "user" : "environment"
+        player.classList.add("d-none")
 
         const tracks = player.srcObject.getVideoTracks()
         for (let i = 0; i < tracks.length; i++) {
