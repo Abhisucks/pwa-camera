@@ -43,14 +43,14 @@
       let mode = "user"
 
       switchBtn.addEventListener("click", () => {
-        mode = "environment"
+        mode = mode === "enviroment" ? "user" : "enviroment"
 
         const tracks = player.srcObject.getVideoTracks()
         for (let i = 0; i < tracks.length; i++) {
           tracks[i].stop()
           
         }
-        
+
         openCamera()
       })
 
