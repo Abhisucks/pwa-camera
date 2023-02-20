@@ -44,11 +44,43 @@
 
       switchBtn.addEventListener("click", () => {
         mode = "environment"
+
+        const tracks = player.srcObject.getVideoTracks()
+        for (let i = 0; i < tracks.length; i++) {
+          tracks[i].stop()
+          
+        }
+        
+        openCamera()
       })
 
       startBtn.addEventListener("click", async () => {
         console.log("start button clicked")
+        openCamera()
 
+      })
+      captureBtn.addEventListener("click", () => {
+        console.log("capture button clicked")
+      })
+      closeBtn.addEventListener("click", () => {
+        console.log("close button clicked")
+
+
+        console.log(player.srcObject.getVideoTracks())
+        const tracks = player.srcObject.getVideoTracks()
+        for (let i = 0; i < tracks.length; i++) {
+          tracks[i].stop()
+          
+        }
+
+        captureBtn.classList.add("d-none")
+        closeBtn.classList.add("d-none")
+        startBtn.classList.remove("d-none")
+        player.classList.add("d-none")
+      })
+
+      const openCamera = async() => {
+        
         // handleCamera Start
         if (navigator.mediaDevices) {
           document.getElementById("loader").innerHTML = `
@@ -89,27 +121,7 @@
         closeBtn.classList.remove("d-none")
         startBtn.classList.add("d-none")
         player.classList.remove("d-none")
-      })
-      captureBtn.addEventListener("click", () => {
-        console.log("capture button clicked")
-      })
-      closeBtn.addEventListener("click", () => {
-        console.log("close button clicked")
-
-
-        console.log(player.srcObject.getVideoTracks())
-        const tracks = player.srcObject.getVideoTracks()
-        for (let i = 0; i < tracks.length; i++) {
-          tracks[i].stop()
-          
-        }
-
-        captureBtn.classList.add("d-none")
-        closeBtn.classList.add("d-none")
-        startBtn.classList.remove("d-none")
-        player.classList.add("d-none")
-      })
-
+      }
 
 
 
