@@ -22,7 +22,7 @@ import{openCamera, closeCamera}from "./camera.js"
 // let mode = "user"
 
 switchBtn.addEventListener("click", () => {
-  mode = mode === "environment" ? "user" : "environment"
+   mode === "environment" ? "user" : "environment"
   player.classList.add("d-none")
 
   const tracks = player.srcObject.getVideoTracks()
