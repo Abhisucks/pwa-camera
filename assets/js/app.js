@@ -13,8 +13,7 @@ import {
   player ,
   switchBtn ,
   canvas ,
-  restart ,
-  getMode, 
+  restart , 
   changeMode
 }from "./constants.js"
 
@@ -24,7 +23,7 @@ import{openCamera, closeCamera}from "./camera.js"
 
 switchBtn.addEventListener("click", () => {
 // mode = mode === "environment" ? "user" : "environment"
-getMode() === "environment" ? changeMode("user") : changeMode("environment")
+ changeMode()
 
   player.classList.add("d-none")
 

@@ -6,7 +6,8 @@ import {
   switchBtn ,
   canvas ,
   restart ,
-  getMode
+  getMode,
+  changeMode
 }from "./constants.js"
 
 

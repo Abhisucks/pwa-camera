@@ -11,9 +11,8 @@ export const restart = document.getElementById("restart")
     return mode
  }
 
- export const changeMode = (arg) => {
-    mode = arg
-    return mode
+ export const changeMode = () => {
+   mode = mode === "environment" ? "user" : "environment"
  }
 
 
