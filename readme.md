@@ -16,7 +16,7 @@ Overall, the camera feature in a PWA provides users with the convenience of acce
 
 ## Tech Stack
 
-**Client:** HTML, CSS, Javascript
+**Client:** HTML, Bootstrap, Javascript
 
 ## Authors
 
