@@ -1,0 +1,34 @@
+{
+    "name": "PWA-Camera",
+    "short_name": "Camera",
+    "start_url": "/PWA-Camera",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "assets/images/Icon-48.png",
+            "sizes": "48x48"
+        },
+        {
+            "src": "assets/images/Icon-72.png",
+            "sizes": "72x72"
+        },
+        {
+            "src": "assets/images/Icon-96.png",
+            "sizes": "96x96"
+        },
+        {
+            "src": "assets/images/Icon-144.png",
+            "sizes": "144x144"
+        },
+        {
+            "src": "assets/images/Icon-192.png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "assets/images/Icon-512.png",
+            "sizes": "512x512"
+        }
+    ]
+}
+
+
