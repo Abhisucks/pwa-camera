@@ -6,7 +6,7 @@ import {
   switchBtn ,
   canvas ,
   restart ,
-  // mode
+  getMode
 }from "./constants.js"
 
 
@@ -27,6 +27,7 @@ export const closeCamera = () => {
   player.classList.add("d-none")
 }
 
+
 export  const openCamera = async() => {
   
   // handleCamera Start
@@ -36,15 +37,11 @@ export  const openCamera = async() => {
 
 
     startBtn.setAttribute("disabled", true)
-    
-    let mode = "user"
-    mode = mode === "environment" ? "user" : "environment"
-    
 
     try {
       const x = await navigator.mediaDevices.getUserMedia({
      video: {
-      facingMode: mode
+      facingMode: getMode()
      },
     
      })
