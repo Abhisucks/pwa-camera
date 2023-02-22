@@ -6,15 +6,7 @@ export const switchBtn = document.getElementById("switchCamera")
 export const canvas = document.getElementById("canvas")
 export const restart = document.getElementById("restart")
 
- let mode = "user";
- export const getMode = () => {
-    return mode
- }
-
- export const changeMode = () => {
-//    mode = mode === "environment" ? "user" : "environment"
-   mode = mode === "user" ? "environment" : "user"
- }
+ 
 
 
 
