@@ -14,15 +14,18 @@ import {
   switchBtn ,
   canvas ,
   restart ,
-  mode
+  // mode
 }from "./constants.js"
 
 import{openCamera, closeCamera}from "./camera.js"
 
-// let mode = "user"
+let mode = "user"
 
 switchBtn.addEventListener("click", () => {
-   mode === "environment" ? "user" : "environment"
+mode = mode === "environment" ? "user" : "environment"
+ 
+  console.log(mode);
+
   player.classList.add("d-none")
 
   const tracks = player.srcObject.getVideoTracks()

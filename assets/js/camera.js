@@ -6,7 +6,7 @@ import {
   switchBtn ,
   canvas ,
   restart ,
-  mode
+  // mode
 }from "./constants.js"
 
 
@@ -36,6 +36,9 @@ export  const openCamera = async() => {
 
 
     startBtn.setAttribute("disabled", true)
+    
+    let mode = "user"
+    mode = mode === "environment" ? "user" : "environment"
     
 
     try {
