@@ -42,7 +42,7 @@ export  const openCamera = async() => {
     try {
       const x = await navigator.mediaDevices.getUserMedia({
      video: {
-      facingMode: changeMode()
+      facingMode: getMode()
      },
     
      })

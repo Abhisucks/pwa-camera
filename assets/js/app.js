@@ -14,7 +14,7 @@ import {
   switchBtn ,
   canvas ,
   restart , 
-  changeMode
+  changeMode,
 }from "./constants.js"
 
 import{openCamera, closeCamera}from "./camera.js"
