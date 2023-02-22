@@ -6,9 +6,16 @@ import {
   switchBtn ,
   canvas ,
   restart ,
-  getMode,
-  changeMode
+  // getMode,
+  // changeMode,
 }from "./constants.js"
+
+
+let mode = "user"
+
+ export const changeMode = () => {
+   mode = mode === "user" ? "environment" : "user"
+ }
 
 
 export const closeCamera = () => {
@@ -42,7 +49,7 @@ export  const openCamera = async() => {
     try {
       const x = await navigator.mediaDevices.getUserMedia({
      video: {
-      facingMode: getMode()
+      facingMode: mode
      },
     
      })
@@ -57,6 +64,9 @@ export  const openCamera = async() => {
   } else {
     console.error("mediaDevices Not Supported");
   }
+
+  
+  console.log(mode);
 
 
   // handleCamera end

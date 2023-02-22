@@ -14,12 +14,9 @@ import {
   switchBtn ,
   canvas ,
   restart , 
-  changeMode,
 }from "./constants.js"
 
-import{openCamera, closeCamera}from "./camera.js"
-
-// let mode = "user"
+import{openCamera, closeCamera, changeMode}from "./camera.js"
 
 switchBtn.addEventListener("click", () => {
 // mode = mode === "environment" ? "user" : "environment"
